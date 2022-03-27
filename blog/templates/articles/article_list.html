@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container-fluid jumbotron text-center">
+     <h1 class="display-4">Prodcut List</h1>
+</div>
+<div class="container-fluid">
+     <div class="row">
+          {% for instance in object_list %}
+          <div class="col-md-3">
+               <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ instance.title }}</h5>
+                    <a href={{ instance.get_absolute_url }} class="btn btn-primary">Visit Prodcut</a>
+                    </div>
+               </div>
+          </div>
+          {% endfor %}
+          
+     </div>
+</div>
+
+{% endblock %}

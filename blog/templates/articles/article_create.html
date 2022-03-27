@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 align="center">Create Blog</h1><br>
+<form class="text-center" action='.' method='POST'>{% csrf_token %}
+    <div class="form-group text-center">
+    {{ form.as_p }}
+    <input class="btn btn-primary" type='submit' value='Save'/>
+    </div>
+    <a href="{% url 'article-list'%}" class="btn btn-success">Go Back to Home</a>
+</form>
+
+{% endblock %}

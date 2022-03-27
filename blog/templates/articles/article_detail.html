@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron  text-center">
+    <h1>{{ object.title }}</h1>
+    <p>{{ object.content }}</p>
+    <a class="btn btn-warning" href={% url 'article-update' article.id %}>Update</a>
+    <a class="btn btn-danger" href={% url 'article-delete' article.id %}>delete</a>
+    <br><br><a href="{% url 'article-list'%}" class="btn btn-success">Go Back to Home</a>
+</div>
+{% endblock %}
