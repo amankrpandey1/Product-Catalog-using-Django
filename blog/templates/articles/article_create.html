@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1 align="center">Create Blog</h1><br>
-<form class="text-center" action='.' method='POST'>{% csrf_token %}
+<form class="text-center" action='.' method='POST' enctype="multipart/form-data">{% csrf_token %}
     <div class="form-group text-center">
     {{ form.as_p }}
     <input class="btn btn-primary" type='submit' value='Save'/>

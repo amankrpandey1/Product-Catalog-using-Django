@@ -10,4 +10,5 @@ class ArticleModelForm(forms.ModelForm):
             'title',
             'content',
             'active',
+            'article_Main_Img'
         ]

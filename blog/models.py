@@ -5,6 +5,7 @@ class Article(models.Model):
     title   = models.CharField(max_length=120)
     content = models.TextField()
     active  = models.BooleanField(default=True)
+    article_Main_Img = models.ImageField(upload_to='images/',default=" ")
 
     def get_absolute_url(self):
         return reverse("articles:article-detail", kwargs={"id": self.id})

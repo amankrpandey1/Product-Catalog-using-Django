@@ -11,7 +11,7 @@
           {% for instance in object_list %}
           <div class="col-md-3">
                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <img class="card-img-top" src="{{instance.article_Main_Img.url}}" alt="Card image cap" height=200>
                     <div class="card-body">
                     <h5 class="card-title">{{ instance.title }}</h5>
                     <a href={{ instance.get_absolute_url }} class="btn btn-primary">Visit Prodcut</a>
